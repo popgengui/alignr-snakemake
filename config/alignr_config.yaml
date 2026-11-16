@@ -1,0 +1,24 @@
+#Arguments to run alignR's trim_fastp function
+#note that args RA_fastqs and RB_fastqs are assigned
+#according to the input given in the tr
+trim_fastp:
+  adapter_r1: "AGATCGGAAGAGCACACGTCTGAACTCCAGTCA"
+  adapter_r2: "AGATCGGAAGAGCGTCGTGTAGGGAAAGAGTGT"
+  cut_front: FALSE
+  cut_front_mean_quality: NULL
+  cut_tail: FALSE
+  cut_tail_mean_quality: NULL
+  cut_right: 4
+  cut_right_mean_quality: 20
+  trim_poly_g: 10
+  trim_poly_x: FALSE
+  par: 1
+
+#Argumkents to run alignR's align_reference
+align_reference:
+  mapQ: 5
+  read_metadata: NULL
+  remove_duplicates: TRUE
+  remove_improper_pairs: TRUE
+  par: 1
+
