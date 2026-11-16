@@ -1,0 +1,12 @@
+configfile: "config/config.yaml"
+configfile: "config/alignr_config.yaml"
+import os
+
+include: "rules/trim.smk"
+include: "rules/align.smk"
+include: "rules/common.smk"
+
+
+rule all:
+    input:
+        f"results/.alignment_done"
