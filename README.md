@@ -17,7 +17,7 @@
       conda create -c conda-forge -c bioconda -c nodefaults -n snakemake snakemake	
 
 ### Installation and Usage
-- Demonstration: after cloning this repository, and navigating in your terminal to the main repository directory, you can execute the workflow on the demo fastq files in the "demo-input" directory. You first load your snakemake environment, then start the workflow, with the commands:
+- Demonstration: after cloning this repository (or downloading and uzipping its archive), and navigating in your terminal to the main repository directory, you can execute the workflow on the demo fastq files in the "demo-input" directory. You first load your snakemake environment, then start the workflow, with the commands:
 
 
         conda activate snakemake
@@ -25,9 +25,8 @@
         snakemake --cores 1 --use-conda
 
      Note that you can set the number of cores depending on the number available on your machine, and at your discretion.
-
      
-     On the first run of the workflow, it will download and install aconda envirnoment that includes an R installation, and adding multiple programs needed by the alignR package. This can take just a few or over 10 minutes, depending on your internet connection speed. It will also install the alignR package. Once the conda environment is present, subsequent executions of the workflow will skip these downloads and installations.
+     On the first run of the workflow, it will download and install aconda envirnoment that includes an R installation and multiple programs needed by the alignR package. This can take just a few or over 10 minutes, depending on your internet connection speed. It will also install the alignR package. Once the conda environment is present, subsequent executions of the workflow will skip these downloads and installations.
 
 - Running with your own fastq files
 
