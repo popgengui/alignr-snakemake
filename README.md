@@ -1,6 +1,6 @@
 # alignr-snakemake
 
-- alignr-snakemake is a snakemake workflow that automates processing fastq files. Just underway, the project's workflow currently only trims (with fastp) and aligns (with bwa). Please use this workflow with caution as we have only just started running and testing it. We anticipate soon adding genotyping, to produce vcf files. Currently, our aim is to use alignR R package to run the programs in each step. 
+- alignr-snakemake is a snakemake workflow that automates processing fastq files. Just underway, the project's workflow currently only trims (with fastp) and aligns (with bwa). Please use this workflow with caution as we have only just started running and testing it. We anticipate soon adding genotyping, to produce vcf files. Currently, our aim is to use the alignR R package to run the programs in each step. 
 
 ### Dependencies:
 
