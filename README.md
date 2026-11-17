@@ -2,13 +2,17 @@
 
 - alignr-snakemake is a snakemake workflow that automates processing fastq files. Just underway, the project's workflow currently only trims (with fastp) and aligns (with bwa). Please use this workflow with caution as we have only just started running and testing it. We anticipate soon adding genotyping, to produce vcf files. Currently, our aim is to use the alignR R package to run the programs in each step. 
 
+### System Requirements
+
+- The conda environment created by the workflow uses about 3.5 G of storage.
+
 ### Dependencies:
 
 - The Conda and/or Mamba package manager. If you don't already have it, a compact version, recommended by this developer, is at, 
 
      https://github.com/conda-forge/miniforge
   
-- Snakmake, a python-based workflow manager. With a conda manager (see above) installed, you can add a snakemake environment with the command,
+- Snakmake, a python-based workflow manager. With a conda manager installed (see above), you can add a snakemake environment with the command,
 
       conda create -c conda-forge -c bioconda -c nodefaults -n snakemake snakemake	
 
@@ -27,7 +31,7 @@
 
 - Running with your own fastq files
 
-    - Add two files to the directory containing your fastq files. One file will list the fastqs that hold the first (R1) of the paired reads, the second should list, in the same order, their corresponding seconds (R2). You can see an example of these inside the "demo-input" directory, named "read_one_fastqs.csv", and "read_two_fastqs.csv". You can copy these into your own data's directory and replace their contents with the paths and names of your fastq pairs. If your own data directory is not directly inside the alignr-snakemake directory, you should enter the full path as part of the name for each fastq file, otherwise use the relative path (as seen in the demo files). You can trim and align unpaired fastqs by listing theem read\_one list, and leaving the read\_two list empty.
+    - Add two files to the directory containing your fastq files. One file will list the fastqs that hold the first (R1) of the paired reads, the second should list, in the same order, their corresponding seconds (R2). You can see an example of these inside the "demo-input" directory, named "read_one_fastqs.csv", and "read_two_fastqs.csv". You can copy these into your own data's directory and replace their contents with the paths and names of your fastq pairs. If your own data directory is not directly inside the alignr-snakemake directory, you should enter the full path as part of the name for each fastq file, otherwise use the relative path (as seen in the demo files). You can trim and align unpaired fastqs by listing them in the read\_one list, and leaving the read\_two list empty.
 
     - In the file config/config.yaml, replace the existing paths and list-file names (created for the demo-input) for those that you've made in your data directory. Note that you should enter the name of the trimmed file lists, which will be created automatically after the trimming, as identical to the first lists, with the extension ".trimmed" added. 
 
