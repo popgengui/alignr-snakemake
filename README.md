@@ -17,7 +17,7 @@
       conda create -c conda-forge -c bioconda -c nodefaults -n snakemake snakemake	
 
 ### Installation and Usage
-- Demonstration: after cloning this repository, and navigating in your terminal to the main repository directory, you can execute the workflow on the demo fastq files in the "demo-input" directory inside the repository main directory. You first load your snakemake environment, then start the workflow, with the commands:
+- Demonstration: after cloning this repository, and navigating in your terminal to the main repository directory, you can execute the workflow on the demo fastq files in the "demo-input" directory. You first load your snakemake environment, then start the workflow, with the commands:
 
 
         conda activate snakemake
