@@ -1,10 +1,12 @@
+from pathlib import Path
+
 rule run_align_reference:
 	input: 
 		f"{workflow.basedir}/envs/alignr-env.yaml",
 		kernel_set="results/.kernel.set",	
-		fastq_r1_list = config['list_trimmed_r1_fastqs'],
-		fastq_r2_list = config['list_trimmed_r2_fastqs'],
-		refseq = config[ 'reference_sequences' ] ,
+		fastq_r1_list = Path( config['data_dir'] ) / config['list_trimmed_r1_fastqs'],
+		fastq_r2_list = Path( config['data_dir'] ) / config['list_trimmed_r2_fastqs'],
+		refseq = Path( config['data_dir']  ) / config[ 'reference_sequences' ] ,
 		rsutils = "scr/rs_utils.R"
 	output:
 		touch( "results/.alignment_done" ),

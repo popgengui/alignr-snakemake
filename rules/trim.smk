@@ -1,14 +1,16 @@
 
+from pathlib import Path
+
 rule run_trim_fastp:
 	input: 
 		f"{workflow.basedir}/envs/alignr-env.yaml",
 		kernel_set="results/.kernel.set",	
-		fastq_r1_list = config['list_r1_fastqs'],
-		fastq_r2_list = config['list_r2_fastqs'],
+		fastq_r1_list = Path( config['data_dir'] ) / config['list_r1_fastqs'],
+		fastq_r2_list = Path( config['data_dir'] ) / config['list_r2_fastqs'],
 		rsutils = "scr/rs_utils.R"
 	output:
-		f"{config[ 'list_r1_fastqs' ]}.trimmed",
-		f"{config[ 'list_r2_fastqs' ]}.trimmed"
+		Path( config['data_dir'] ) / f"{config[ 'list_r1_fastqs' ]}.trimmed",
+		Path( config['data_dir'] ) / f"{config[ 'list_r2_fastqs' ]}.trimmed"
 	conda:
 		"../envs/alignr-env.yaml"
 	log:

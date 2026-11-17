@@ -1,13 +1,13 @@
 # Directories
-data_dir: "demo-input/"
+data_dir: "demo-input"
 
 # Input file paths
-list_r1_fastqs: "demo-input/read_one_fastqs.csv"
-list_r2_fastqs: "demo-input/read_two_fastqs.csv"
-reference_sequences: "demo-input/monarch_genome_subset.fna.gz"
+list_r1_fastqs: "read_one_fastqs.csv"
+list_r2_fastqs: "read_two_fastqs.csv"
+reference_sequences: "monarch_genome_subset.fna.gz"
 
 # Generated output file paths
-list_trimmed_r1_fastqs: "demo-input/read_one_fastqs.csv.trimmed"
-list_trimmed_r2_fastqs: "demo-input/read_two_fastqs.csv.trimmed"
+list_trimmed_r1_fastqs: "read_one_fastqs.csv.trimmed"
+list_trimmed_r2_fastqs: "read_two_fastqs.csv.trimmed"
 
 
