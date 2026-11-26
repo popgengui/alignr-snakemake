@@ -4,7 +4,7 @@
 
 ### System Requirements
 
-- The conda environment created by the workflow uses about 3.5 G of storage.
+- The conda environment created by the workflow uses about 4.2 G of storage.
 
 ### Dependencies:
 
