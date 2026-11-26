@@ -7,7 +7,7 @@ rule run_align_reference:
 		fastq_r1_list = Path( config['data_dir'] ) / config['list_trimmed_r1_fastqs'],
 		fastq_r2_list = Path( config['data_dir'] ) / config['list_trimmed_r2_fastqs'],
 		refseq = Path( config['data_dir']  ) / config[ 'reference_sequences' ] ,
-		rsutils = "scr/rs_utils.R"
+		rsutils = "scripts/rs_utils.R"
 	output:
 		touch( "results/.alignment_done" ),
 	conda:
@@ -18,7 +18,7 @@ rule run_align_reference:
 	params:
 		args = config["align_reference"]
 	script:
-		"../scr/run_align_reference.R"
+		"../scripts/run_align_reference.R"
 
 #end rule run_trim_fastp
 

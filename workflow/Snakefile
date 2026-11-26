@@ -5,6 +5,7 @@ import os
 include: "rules/trim.smk"
 include: "rules/align.smk"
 include: "rules/common.smk"
+include: "rules/utils.smk"
 
 
 rule all:
