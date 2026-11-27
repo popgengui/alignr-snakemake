@@ -10,7 +10,7 @@
 
 ### Dependencies:
 
-- The Conda and/or Mamba package manager. If you don't already have it, a compact version, recommended by this developer, is at, 
+- The Conda and/or Mamba package manager. If you don't already have it, a compact version, used to create this workflow, is at, 
 
      https://github.com/conda-forge/miniforge
   
