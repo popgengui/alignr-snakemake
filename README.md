@@ -6,7 +6,7 @@
 
 - The conda environment created by the workflow uses about 4.2 G of storage.
 
-- OS notes: To date, it has only been run successully on a Linux machine.  The Mac OS Silicon (ARM) architecture is not compatible with many of the packages listed or the conda envirnoment.  There may e a way to use the Mac Rosetta translator, but we have not yet found a solution.  This workflow has not yet been run under Windows.
+- OS notes: To date, it has only been run successully on a Linux machine.  The Mac OS Silicon (ARM) architecture is not compatible with many of the packages listed for the conda envirnoment.  There may be a way to use the Mac Rosetta translator to install and use x86 packages, but we have not yet found a solution.  This workflow has not yet been run under Windows.
 
 ### Dependencies:
 
